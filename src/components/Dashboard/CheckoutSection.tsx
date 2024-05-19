@@ -8,7 +8,7 @@ const CheckoutSection = () => {
         <div className=" flex justify-between pt-10 pb-5">
           <div className="flex gap-1">
             <Image
-              src={"/Images/checkout/chat.svg"}
+              src={"/Images/checkout/Chat.svg"}
               alt="chat Icon"
               height={30}
               width={30}
