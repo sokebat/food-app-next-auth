@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} container mx-auto  bg-[#e5e8e5d1]`}
+        className={`${inter.className} max-w-[1600px] mx-auto  bg-[#e5e8e5d1]`}
         cz-shortcut-listen="false"
       >
         {" "}

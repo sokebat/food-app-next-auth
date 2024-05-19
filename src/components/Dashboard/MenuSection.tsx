@@ -31,7 +31,7 @@ const MenuSection = () => {
   ];
 
   return (
-    <section className="h-auto   bg-[#FFFFFF] px-2 xl:px-5 ">
+    <section className="h-full  bg-[#FFFFFF] px-2 xl:px-5 ">
       <h3 className="text-center text-[#2E2E2E] font-bold pt-10  pb-7  text-3xl">
         GoMeal<span className="text-orange-400 text-3xl ">.</span>
       </h3>

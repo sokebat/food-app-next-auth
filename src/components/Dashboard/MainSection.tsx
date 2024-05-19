@@ -77,12 +77,12 @@ const MainSection = () => {
         <VoucherCard />
       </div>
 
-      <div className="container">
+      <div className="">
         <div className="flex py-3 justify-between">
           <p className="font-bold text-xl">Category</p>
           <p className="font-normal text-lg text-[#F8B602] ">veiw all &gt; </p>
         </div>
-        <div className="flex justify-between gap-2 overflow-x-auto mx-4 container">
+        <div className="flex justify-between gap-2 overflow-x-auto mx-4 py-3 ">
           {categoryData.map((category, index) => (
             <div key={index}>
               <CategoryCard name={category.name} icon={category.icon} />

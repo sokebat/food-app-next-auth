@@ -3,12 +3,12 @@ import React from "react";
 
 const ProductCard = () => {
   return (
-    <div className="rounded-xl bg-[#ffffff]  pt-4  border-2 sm:min-w-80  mt-3 relative">
+    <div className="rounded-xl bg-[#ffffff]  pt-4  border-2 sm:min-w-72 mt-3 relative">
       <p className="px-2 rounded-r-md bg-[#EB5757] w-20 absolute top-2">
         15% Off
       </p>
 
-      <div className=" ml-8 flex items-start justify-center  ">
+      <div className=" ml-5 flex items-start justify-center  ">
         <Image
           src={"/Images/test.png"}
           alt="Dashboard Icon"
@@ -17,7 +17,7 @@ const ProductCard = () => {
           quality={100}
         />
 
-        <p className=" ml-9 sm:ml-5 ">
+        <p className=" ml-2 ">
           {" "}
           <Image
             src={"/Images/Love.svg"}

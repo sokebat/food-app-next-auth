@@ -3,7 +3,7 @@ import Image from "next/image";
 import OrderMenuCard from "../Cards/OrderMenuCard";
 const CheckoutSection = () => {
   return (
-    <section className="h-auto    bg-[#FFFFFF]  px-3 ">
+    <section className="h-full bg-[#FFFFFF]  px-3 ">
       <div>
         <div className=" flex justify-between pt-10 pb-5">
           <div className="flex gap-1">
