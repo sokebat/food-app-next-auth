@@ -1,7 +1,8 @@
 import React from "react";
-import Image from "next/image";
 import OrderMenuCard from "../Cards/OrderMenuCard";
-const CheckoutSection = () => {
+import Image from "next/image";
+
+const MobileCheckoutSection = () => {
   return (
     <section className="h-auto    bg-[#FFFFFF]  px-3 ">
       <div>
@@ -90,4 +91,4 @@ const CheckoutSection = () => {
   );
 };
 
-export default CheckoutSection;
+export default MobileCheckoutSection;

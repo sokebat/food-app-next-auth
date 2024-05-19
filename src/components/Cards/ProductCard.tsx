@@ -3,7 +3,7 @@ import React from "react";
 
 const ProductCard = () => {
   return (
-    <div className="rounded-xl bg-[#ffffff]  pt-4 min-w-80  mt-3 relative">
+    <div className="rounded-xl bg-[#ffffff]  pt-4  border-2 sm:min-w-80  mt-3 relative">
       <p className="px-2 rounded-r-md bg-[#EB5757] w-20 absolute top-2">
         15% Off
       </p>
@@ -17,11 +17,11 @@ const ProductCard = () => {
           quality={100}
         />
 
-        <p className=" ml-5 ">
+        <p className=" ml-9 sm:ml-5 ">
           {" "}
           <Image
             src={"/Images/Love.svg"}
-            alt="Dashboard Icon"
+            alt="love Icon"
             height={20}
             width={20}
             quality={100}
@@ -30,13 +30,13 @@ const ProductCard = () => {
       </div>
 
       <div className="flex items-center justify-between px-10 mt-3 pb-3 ">
-        <div>
+        <div className="text-xs sm:text-lg">
           <p>Cheese Cake</p>
           <p className="text-xl">
-            <span className="text-primary">$</span>5.59
+            <span className="text-[#F8B602]">$</span>5.59
           </p>
         </div>
-        <p className="bg-primary p-2 px-4 text-white text-xl  text-center rounded-lg ">
+        <p className="bg-[#F8B602] p-1 px-2 sm:p-2 sm:px-4 text-white text-xs sm:text-lg md:text-xl  text-center rounded-lg ">
           +
         </p>
       </div>

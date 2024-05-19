@@ -4,7 +4,7 @@ import Circle from "../Utils/Circle";
 
 const VoucherCard = () => {
   return (
-    <div className="bg-primary text-white p-4 flex flex-col gap-y-3 rounded-lg  relative">
+    <div className="bg-[#F8B602] text-white p-4 flex flex-col gap-y-3 rounded-lg container  relative">
       <p className=" text-2xl font-bold">
         Get Discount Voucher <br /> Up To 20%
       </p>

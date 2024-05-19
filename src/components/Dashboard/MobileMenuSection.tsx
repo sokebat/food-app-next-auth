@@ -1,7 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import ContactCard from "../Cards/ContactCard";
-const MenuSection = () => {
+import { SheetClose } from "../ui/sheet";
+const MobileMenuSection = () => {
   const datas = [
     {
       id: 1,
@@ -32,9 +33,6 @@ const MenuSection = () => {
 
   return (
     <section className="h-auto   bg-[#FFFFFF] px-2 xl:px-5 ">
-      <h3 className="text-center text-[#2E2E2E] font-bold pt-10  pb-7  text-3xl">
-        GoMeal<span className="text-orange-400 text-3xl ">.</span>
-      </h3>
       <section className="flex flex-col gap-y-3 ">
         <div className="bg-[#F8B602] flex gap-1 2xl:gap-4 py-3 px-3 xl:px-5 2xl:px-7  items-center justify-start rounded-xl ">
           <Image
@@ -44,11 +42,14 @@ const MenuSection = () => {
             width={30}
             quality={100}
           />
-          <p className="font-semibold text-white text-lg ">Dashboard</p>
+          <SheetClose >
+            {" "}
+            <p className="font-semibold text-white text-lg ">Dashboard</p>{" "}
+          </SheetClose>
         </div>
         {datas.map((data) => {
           return (
-            <div
+            <SheetClose 
               className="gap-2  2xl:gap-4 py-3 px-3  2xl:px-7  flex   items-center justify-start rounded-xl "
               key={data.id}
             >
@@ -63,7 +64,7 @@ const MenuSection = () => {
               <p className="font-semibold text-[#A098AE] text-sm 2xl:text-lg ">
                 {data.name}
               </p>
-            </div>
+            </SheetClose>
           );
         })}
       </section>
@@ -75,4 +76,4 @@ const MenuSection = () => {
   );
 };
 
-export default MenuSection;
+export default MobileMenuSection;
