@@ -7,13 +7,10 @@ import useRefreshToken from "./useRefreshToken";
 const useAxiosPrivate = () => {
   const { data: session } = useSession();
   const refresh = useRefreshToken();
-  // console.log(session?.user.token);
-  
 
   useEffect(() => {
     const requestInterceptor = axiosPrivate.interceptors.request.use(
       (config) => {
-        console.log(config)
         if (!config.headers["Authorization"]) {
           config.headers["Authorization"] = `Bearer ${session?.user.token}`;
         }
@@ -22,14 +19,14 @@ const useAxiosPrivate = () => {
       (error) => Promise.reject(error)
     );
 
-    const resposeInterceptor = axiosPrivate.interceptors.response.use(
-      (respose) => respose,
+    const responseInterceptor = axiosPrivate.interceptors.response.use(
+      (response) => response,
       async (error) => {
         const prevRequest = error?.config;
         if (error.response?.status === 401 && !prevRequest.sent) {
           prevRequest.sent = true;
-          const newRefreshToken = await refresh();
-          prevRequest.headers["Authorization"] = `Bearer ${newRefreshToken}`;
+          const newAccessToken = await refresh();
+          prevRequest.headers["Authorization"] = `Bearer ${newAccessToken}`;
           return axiosPrivate(prevRequest);
         }
         return Promise.reject(error);
@@ -38,9 +35,10 @@ const useAxiosPrivate = () => {
 
     return () => {
       axiosPrivate.interceptors.request.eject(requestInterceptor);
-      axiosPrivate.interceptors.response.eject(resposeInterceptor);
+      axiosPrivate.interceptors.response.eject(responseInterceptor);
     };
   }, [session, refresh]);
+
   return axiosPrivate;
 };
 

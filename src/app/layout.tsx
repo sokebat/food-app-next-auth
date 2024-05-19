@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { SessionProvider } from "next-auth/react";
+import Provider from "./Provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,10 +22,8 @@ export default function RootLayout({
         className={`${inter.className} container mx-auto  bg-[#e5e8e5d1]`}
         cz-shortcut-listen="false"
       >
-        {/* <SessionProvider> */}
-          {children}
-          
-          {/* </SessionProvider> */}
+        {" "}
+        <Provider>{children}</Provider>
       </body>
     </html>
   );
