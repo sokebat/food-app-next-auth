@@ -1,6 +1,7 @@
-'use client'
+"use client";
 import React from "react";
 import { SessionProvider } from "next-auth/react";
+import { Toaster } from "react-hot-toast";
 
 const Provider = ({
   children,
@@ -9,7 +10,10 @@ const Provider = ({
 }>) => {
   return (
     <div>
-      <SessionProvider>{children}</SessionProvider>
+      <SessionProvider>
+        <Toaster position="top-center" />
+        {children}
+      </SessionProvider>
     </div>
   );
 };

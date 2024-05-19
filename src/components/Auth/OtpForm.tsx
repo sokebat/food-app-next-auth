@@ -3,6 +3,7 @@ import axios from "axios";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
+import toast from "react-hot-toast";
 
 const OtpForm = () => {
   const router = useRouter();
@@ -25,11 +26,14 @@ const OtpForm = () => {
 
       try {
         const res = axios.post("/verify-otp", data);
-        console.log(res)
+        toast.success("Account create Sucessfully");
+        
         router.push("/sign-in");
         localStorage.removeItem("otp_token");
       } catch (error) {
         console.log(error);
+        toast.error("Something went wrong");
+
       }
     }
   };

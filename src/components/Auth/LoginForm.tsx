@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { signIn } from "next-auth/react";
+import toast, { Toaster } from "react-hot-toast";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -20,8 +21,8 @@ const Login = () => {
   };
 
   const handelSignIn = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    console.log(formData)
+    e.preventDefault();
+    console.log(formData);
     try {
       const res = await signIn("credentials", {
         email: formData.email,
@@ -30,15 +31,18 @@ const Login = () => {
         callbackUrl: "/",
       });
       console.log(res);
-      // console.log(res?.status);
+
       if (res?.status === 200) {
+        toast.success("Successfully Loggedin");
         router.push("/dashboard");
-        console.log("Successfully Loggedin");
+      } else if (res?.error) {
+        toast.error(res.error);
       } else {
-        console.log("Something went wrong. Please try again.");
+        toast.error("Logg in Failled");
       }
     } catch (error) {
-      console.log("this is error",error);
+      console.log("this is error", error);
+      toast.error("Unsuccessful login");
     }
   };
 

@@ -4,6 +4,7 @@ import axios from "@/axios/axios";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
+import toast from "react-hot-toast";
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -26,14 +27,16 @@ const Signup = () => {
     e.preventDefault();
     try {
       const res = axios.post("/create-account", formData);
-      console.log(res);
+
       if ((await res).status == 201) {
         const token = (await res).data.data.refreshToken;
         localStorage.setItem("otp_token", token);
         router.push("/verify-otp");
+        toast.success("Verify your Mail");
+
       }
-    } catch (error) {
-      console.log(error);
+    } catch (error: any) {
+      toast.error(error.code);
     }
   };
 

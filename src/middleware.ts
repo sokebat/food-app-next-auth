@@ -22,12 +22,13 @@ export async function middleware(request: NextRequest) {
     url.pathname = "/dashboard";
     return NextResponse.redirect(url);
   }
-  if (!token && pathname === "/verify-otp") {
+  if (!token && pathname.startsWith("/verify-otp")) {
     const url = request.nextUrl.clone();
     url.pathname = "/sign-up";
     return NextResponse.redirect(url);
   }
 
+ 
   if (pathname.startsWith("/dashboard") && !session) {
     const url = request.nextUrl.clone();
     url.pathname = "/sign-in";
@@ -39,5 +40,5 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/dashboard/:path*", "/sign-in", "/sign-up", "/verify-otp"],
+  matcher: ["/dashboard/:path*", "/sign-in", "/sign-up", "/verify-otp",'/:path*'],
 };
