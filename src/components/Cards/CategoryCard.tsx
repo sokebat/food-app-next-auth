@@ -7,7 +7,7 @@ interface CategoryProps {
 
 const CategoryCard = ({ name, icon }: CategoryProps) => {
   return (
-    <div className=" rounded-lg bg-[#ffffff]  p-8 flex flex-col items-center justify-center w-36 ">
+    <div className=" rounded-lg bg-[#ffffff]  border-2  p-8 flex flex-col items-center justify-center w-36 ">
       <Image
         src={icon}
         alt={` ${name} icon`}

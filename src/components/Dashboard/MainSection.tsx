@@ -29,20 +29,103 @@ const MainSection = () => {
       icon: "/Images/mainSection/Fish.svg",
     },
   ];
+
+  const GoMealData = [
+    {
+      id: 1,
+      name: "Cake",
+      url: "https://cdn.pixabay.com/photo/2017/01/11/11/33/cake-1971552_1280.jpg",
+      price: "3.33",
+    },
+    {
+      id: 2,
+
+      name: "Eggs Cake",
+      url: "https://cdn.pixabay.com/photo/2023/03/22/20/16/muffin-7870491_1280.jpg",
+      price: "5.33",
+    },
+    {
+      id: 3,
+
+      name: "Desert",
+      url: "https://cdn.pixabay.com/photo/2018/01/04/11/40/cake-3060458_1280.jpg",
+      price: "3.33",
+    },
+    {
+      id: 4,
+
+      name: "Apple Pie",
+      url: "https://cdn.pixabay.com/photo/2018/10/04/11/37/woman-3723444_1280.jpg",
+      price: "3.33",
+    },
+  ];
+  const beverageData = [
+    {
+      id: 1,
+      name: "Lime mint ",
+      url: "https://cdn.pixabay.com/photo/2016/07/21/11/17/drink-1532300_640.jpg",
+      price: "  ",
+    },
+    {
+      id: 2,
+
+      name: "Cooktail",
+      url: "https://cdn.pixabay.com/photo/2023/06/20/10/06/cocktail-8076619_640.jpg",
+      price: "4.33",
+    },
+    {
+      id: 3,
+      name: "red wine",
+      url: "https://cdn.pixabay.com/photo/2016/07/21/11/17/drink-1532300_640.jpg",
+      price: "2.43",
+    },
+    {
+      id: 4,
+      name: "champagne",
+      url: "https://cdn.pixabay.com/photo/2017/01/09/02/02/pink-wine-1964457_640.jpg",
+      price: "1.33",
+    },
+  ];
+  const BurgerData = [
+    {
+      id: 1,
+      name: "Snack Burger",
+      url: "https://cdn.pixabay.com/photo/2014/10/19/20/59/hamburger-494706_640.jpg",
+      price: "1.6",
+    },
+    {
+      id: 2,
+      name: "Sandwich",
+      url: "https://cdn.pixabay.com/photo/2017/11/25/17/17/sandwich-2977251_640.jpg",
+      price: "5.33",
+    },
+    {
+      id: 3,
+      name: "cheese burger",
+      url: "https://cdn.pixabay.com/photo/2016/01/22/20/23/burger-1156564_640.jpg",
+      price: "3.43",
+    },
+    {
+      id: 4,
+      name: "bbq burger",
+      url: "https://cdn.pixabay.com/photo/2016/03/05/19/02/abstract-1238247_640.jpg",
+      price: "2.33",
+    },
+  ];
   return (
     <div className="md:mx-5   ">
       <div className="flex md:flex-row flex-col gap-y-4  items-center justify-between md:pt-10 ">
         <div className=" flex  justify-between gap-4 items-center md:w-4/3">
-        <p className="text-center text-[#2E2E2E] font-bold text-xl  xl:text-2xl  2xl:text-3xl">
-          Hello, Samantha
-        </p>
-        <div className="flex bg-[#ffffff] text-center py rounded-lg font-semibold pl-3">
-          <p className="p-2">Delivery</p>{" "}
-          <p className="py-3 border-[1px] rounded-md  px-5  text-xs  bg-[#F8B602] cursor-pointer">
-            {" "}
-            Pickup
+          <p className="text-center text-[#2E2E2E] font-bold text-xl  xl:text-2xl  2xl:text-3xl">
+            Hello, Samantha
           </p>
-        </div>
+          <div className="flex bg-[#ffffff] text-center py rounded-lg font-semibold pl-3">
+            <p className="p-2">Delivery</p>{" "}
+            <p className="py-3 border-[1px] rounded-md  px-5  text-xs  bg-[#F8B602] cursor-pointer">
+              {" "}
+              Pickup
+            </p>
+          </div>
         </div>
         <div className="   ">
           <div className="relative">
@@ -96,37 +179,31 @@ const MainSection = () => {
           <p className="font-normal text-lg text-[#F8B602] ">veiw all &gt; </p>
         </div>
         <div className="flex gap-2 overflow-x-auto py-3  overflow-hidden   ">
-          <ProductCard />
-          <ProductCard />
-
-          <ProductCard />
-          <ProductCard />
+          {GoMealData.map((food) => (
+            <ProductCard key={food.id} data={food} />
+          ))}
         </div>
       </div>
-      <div className=" mt-4 container">
-        <div className="flex py-3 justify-between ">
+      <div className=" mt-4  ">
+        <div className="flex py-1 justify-between ">
           <p className="font-bold text-xl">Burger</p>
           <p className="font-normal text-lg text-[#F8B602] ">veiw all &gt; </p>
         </div>
         <div className="flex gap-2 py-3 overflow-x-auto  overflow-hidden mx-auto ">
-          <ProductCard />
-          <ProductCard />
-
-          <ProductCard />
-          <ProductCard />
+          {BurgerData.map((food) => (
+            <ProductCard key={food.id} data={food} />
+          ))}
         </div>
       </div>
-      <div className=" mt-4 container">
+      <div className=" my-4 ">
         <div className="flex py-3 justify-between ">
           <p className="font-bold text-xl">Beverage</p>
           <p className="font-normal text-lg text-[#F8B602] ">veiw all &gt; </p>
         </div>
         <div className="flex gap-2 overflow-x-auto py-3 overflow-hidden mx-auto ">
-          <ProductCard />
-          <ProductCard />
-
-          <ProductCard />
-          <ProductCard />
+          {beverageData.map((food) => (
+            <ProductCard key={food.id} data={food} />
+          ))}
         </div>
       </div>
     </div>

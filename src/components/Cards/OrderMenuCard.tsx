@@ -4,7 +4,7 @@ import React from "react";
 const OrderMenuCard = () => {
   return (
     <div className="">
-      <h3 className="my-3 text-lg font-semibold ">Order Menu</h3>
+      <h3 className="my-3 text-lg font-semibold text-black text-start ">Order Menu</h3>
 
       <div className="flex flex-col gap-y-3 font-semibold ">
         <div className="  flex  gap-1  justify-between items-start  ">
@@ -12,19 +12,19 @@ const OrderMenuCard = () => {
             {" "}
             <Image
               src={
-                "https://media.istockphoto.com/id/1287868629/photo/beautiful-woman-stock-photo.jpg?s=1024x1024&w=is&k=20&c=Ywlhz3DpiRo0TJBNt84QHnnMhrU0HQQtB0ynG6LcWXg="
+                "https://cdn.pixabay.com/photo/2020/08/19/14/42/pizza-5501063_640.jpg"
               }
               alt="pizza Icon"
               height={100}
               width={100}
               quality={100}
-              className="w-10 h-10 xl:w-10"
+              className="w-10 h-10 xl:w-10 rounded-md"
             />
             <div className=" flex flex-col gap-y-1">
               <p className="font-semibold text-black 2xl:text-xs text-[10px] line-clamp-1 ">
                 Pepperoni Pizza
               </p>
-              <p className="font-semibold text-[#A098AE] text-xs ">X1</p>
+              <p className="font-semibold text-[#A098AE] text-xs text-start ">X1</p>
             </div>
           </div>
 
@@ -38,19 +38,19 @@ const OrderMenuCard = () => {
             {" "}
             <Image
               src={
-                "https://media.istockphoto.com/id/1287868629/photo/beautiful-woman-stock-photo.jpg?s=1024x1024&w=is&k=20&c=Ywlhz3DpiRo0TJBNt84QHnnMhrU0HQQtB0ynG6LcWXg="
+                "https://cdn.pixabay.com/photo/2020/08/19/14/42/pizza-5501063_640.jpg"
               }
               alt="pizza Icon"
               height={100}
               width={100}
               quality={100}
-              className="w-10 h-10 xl:w-10"
+              className="w-10 h-10 xl:w-10 rounded-md"
             />
             <div className=" flex flex-col gap-y-1">
-              <p className="font-semibold text-black 2xl:text-xs text-[10px] line-clamp-1 ">
+              <p className="font-semibold  text-black 2xl:text-xs text-[10px] line-clamp-1 ">
                 Pepperoni Pizza
               </p>
-              <p className="font-semibold text-[#A098AE] text-xs ">X1</p>
+              <p className="font-semibold text-[#A098AE] text-xs text-start ">X1</p>
             </div>
           </div>
 
@@ -64,19 +64,19 @@ const OrderMenuCard = () => {
             {" "}
             <Image
               src={
-                "https://media.istockphoto.com/id/1287868629/photo/beautiful-woman-stock-photo.jpg?s=1024x1024&w=is&k=20&c=Ywlhz3DpiRo0TJBNt84QHnnMhrU0HQQtB0ynG6LcWXg="
+                "https://cdn.pixabay.com/photo/2020/08/19/14/42/pizza-5501063_640.jpg"
               }
               alt="pizza Icon"
               height={100}
               width={100}
               quality={100}
-              className="w-10 h-10 xl:w-10"
+              className="w-10 h-10 xl:w-10 rounded-md"
             />
             <div className=" flex flex-col gap-y-1">
               <p className="font-semibold text-black 2xl:text-xs text-[10px] line-clamp-1 ">
                 Pepperoni Pizza
               </p>
-              <p className="font-semibold text-[#A098AE] text-xs ">X1</p>
+              <p className="font-semibold text-[#A098AE] text-xs text-start ">X1</p>
             </div>
           </div>
 
@@ -107,7 +107,7 @@ const OrderMenuCard = () => {
           </div>
         </div>
 
-        <div className="flex text-sm py-4  justify-between flex-col 2xl:flex-row px-3 items-center bg-[#f4f5f4] rounded-lg border-[1px] border-primary my-6 ">
+        <div className="flex text-sm py-4  justify-around flex-col 2xl:flex-row px-3 items-center bg-[#f4f5f4] rounded-lg border-[1px] border-primary my-6 ">
           <div className="rounded-full bg-[#F8B602] w-8 h-9 flex items-center justify-center">
             {" "}
             <Image
@@ -119,7 +119,7 @@ const OrderMenuCard = () => {
               className="w-6  h-8 "
             />
           </div>
-          <div className="text-[11px]">Have a coupon code? &gt;</div>
+          <div className="text-[11px] xl:text-[17px]">Have a coupon code? &gt;</div>
         </div>
 
         <p className="bg-[#F8B602]   gap-4 py-3 px-7  text-center text-white rounded-xl ">

@@ -1,7 +1,15 @@
 import Image from "next/image";
 import React from "react";
+interface DataProps {
+  data: {
+    id: number;
+    name: string;
+    url: string;
+    price: string;
+  };
+}
 
-const ProductCard = () => {
+const ProductCard = ({ data }: DataProps) => {
   return (
     <div className="rounded-xl bg-[#ffffff]  pt-4  border-2 sm:min-w-72 mt-3 relative">
       <p className="px-2 rounded-r-md bg-[#EB5757] w-20 absolute top-2 text-white">
@@ -10,11 +18,12 @@ const ProductCard = () => {
 
       <div className=" ml-5 flex items-start justify-center  ">
         <Image
-          src={"/Images/test.png"}
-          alt="Dashboard Icon"
+          src={data.url}
+          alt={data.name}
           height={200}
           width={200}
           quality={100}
+          className="w-48 h-52 rounded-md"
         />
 
         <p className=" ml-2 ">
@@ -29,17 +38,17 @@ const ProductCard = () => {
         </p>
       </div>
 
-      <div className="flex flex-col items-start gap-2 justify-center px-10 mt-3 pb-3 ">
-        <div className=" flex items-center justify-between gap-4 text-xs sm:text-lg">
-          <p className="text-xs sm:text-lg font-normal ">Cheese Cake</p>
-          <p className="bg-[#F8B602] p-1 px-2 sm:p-2 sm:px-4 text-white text-xs sm:text-lg md:text-xl  text-center rounded-lg ">
+      <div className="flex items-start gap-2 justify-between  px-10 mt-3 pb-3 ">
+        <div className=" flex flex-col items-start justify-between  text-xs sm:text-lg">
+          <p className="text-xs sm:text-lg font-normal ">{data.name}</p>
+          <p className="text-xl">
+            <span className="text-[#F8B602]">$</span>
+            {data.price}
+          </p>
+        </div>
+        <p className="bg-[#F8B602] p-1 px-2 sm:p-1 sm:px-3 text-white text-xs sm:text-lg md:text-xl  text-center rounded-lg ">
           +
         </p>
-         
-        </div>
-        <p className="text-xl">
-            <span className="text-[#F8B602]">$</span>5.59
-          </p>
       </div>
     </div>
   );

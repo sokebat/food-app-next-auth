@@ -68,7 +68,7 @@ const MenuSection = () => {
         })}
       </section>
 
-      <div className="mt-12 py-12 ">
+      <div className="mt-20 py-12 ">
         <ContactCard />
       </div>
     </section>

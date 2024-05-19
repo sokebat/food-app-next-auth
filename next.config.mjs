@@ -10,6 +10,11 @@ const nextConfig = {
         hostname: "media.istockphoto.com",
         port: "",
       },
+      {
+        protocol: "https",
+        hostname: "cdn.pixabay.com",
+        port: "",
+      },
     ],
   },
 };
