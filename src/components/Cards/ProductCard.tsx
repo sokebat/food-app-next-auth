@@ -4,7 +4,7 @@ import React from "react";
 const ProductCard = () => {
   return (
     <div className="rounded-xl bg-[#ffffff]  pt-4  border-2 sm:min-w-72 mt-3 relative">
-      <p className="px-2 rounded-r-md bg-[#EB5757] w-20 absolute top-2">
+      <p className="px-2 rounded-r-md bg-[#EB5757] w-20 absolute top-2 text-white">
         15% Off
       </p>
 
@@ -29,16 +29,17 @@ const ProductCard = () => {
         </p>
       </div>
 
-      <div className="flex items-center justify-between px-10 mt-3 pb-3 ">
-        <div className="text-xs sm:text-lg">
-          <p>Cheese Cake</p>
-          <p className="text-xl">
-            <span className="text-[#F8B602]">$</span>5.59
-          </p>
-        </div>
-        <p className="bg-[#F8B602] p-1 px-2 sm:p-2 sm:px-4 text-white text-xs sm:text-lg md:text-xl  text-center rounded-lg ">
+      <div className="flex flex-col items-start gap-2 justify-center px-10 mt-3 pb-3 ">
+        <div className=" flex items-center justify-between gap-4 text-xs sm:text-lg">
+          <p className="text-xs sm:text-lg font-normal ">Cheese Cake</p>
+          <p className="bg-[#F8B602] p-1 px-2 sm:p-2 sm:px-4 text-white text-xs sm:text-lg md:text-xl  text-center rounded-lg ">
           +
         </p>
+         
+        </div>
+        <p className="text-xl">
+            <span className="text-[#F8B602]">$</span>5.59
+          </p>
       </div>
     </div>
   );

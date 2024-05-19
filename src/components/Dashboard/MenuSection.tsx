@@ -49,7 +49,7 @@ const MenuSection = () => {
         {datas.map((data) => {
           return (
             <div
-              className="gap-2  2xl:gap-4 py-3 px-3  2xl:px-7  flex   items-center justify-start rounded-xl "
+              className="gap-2  2xl:gap-4 py-1 px-3  2xl:px-7  flex   items-center justify-start rounded-xl "
               key={data.id}
             >
               <Image

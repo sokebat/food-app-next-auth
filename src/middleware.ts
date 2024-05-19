@@ -22,11 +22,11 @@ export async function middleware(request: NextRequest) {
     url.pathname = "/dashboard";
     return NextResponse.redirect(url);
   }
-  if (!token && pathname.startsWith("/verify-otp")) {
-    const url = request.nextUrl.clone();
-    url.pathname = "/sign-up";
-    return NextResponse.redirect(url);
-  }
+  // if (!token && pathname.startsWith("/verify-otp")) {
+  //   const url = request.nextUrl.clone();
+  //   url.pathname = "/sign-up";
+  //   return NextResponse.redirect(url);
+  // }
 
  
   if (pathname.startsWith("/dashboard") && !session) {

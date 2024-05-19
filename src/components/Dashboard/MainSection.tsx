@@ -73,7 +73,7 @@ const MainSection = () => {
         </div>
       </div>
 
-      <div className="py-3 mt-3 container ">
+      <div className="py-3 mt-3  ">
         <VoucherCard />
       </div>
 
@@ -90,12 +90,12 @@ const MainSection = () => {
           ))}
         </div>
       </div>
-      <div className=" my-4 pb-9 container">
+      <div className=" my-4 pb-9  ">
         <div className="flex py-3 justify-between ">
           <p className="font-bold text-xl">GoMeal Special</p>
           <p className="font-normal text-lg text-[#F8B602] ">veiw all &gt; </p>
         </div>
-        <div className="flex gap-2 overflow-x-auto py-3  overflow-hidden mx-auto ">
+        <div className="flex gap-2 overflow-x-auto py-3  overflow-hidden   ">
           <ProductCard />
           <ProductCard />
 

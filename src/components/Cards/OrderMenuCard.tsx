@@ -8,7 +8,7 @@ const OrderMenuCard = () => {
 
       <div className="flex flex-col gap-y-3 font-semibold ">
         <div className="  flex  gap-1  justify-between items-start  ">
-          <div className="">
+          <div className=" flex gap-1 justify-between item-center">
             {" "}
             <Image
               src={
@@ -20,20 +20,21 @@ const OrderMenuCard = () => {
               quality={100}
               className="w-10 h-10 xl:w-10"
             />
+            <div className=" flex flex-col gap-y-1">
+              <p className="font-semibold text-black 2xl:text-xs text-[10px] line-clamp-1 ">
+                Pepperoni Pizza
+              </p>
+              <p className="font-semibold text-[#A098AE] text-xs ">X1</p>
+            </div>
           </div>
-          <div className=" flex flex-col gap-y-1">
-            <p className="font-semibold text-black 2xl:text-xs text-[10px] line-clamp-1 ">
-              Pepperoni Pizza
-            </p>
-            <p className="font-semibold text-[#A098AE] text-xs ">X1</p>
-          </div>
+
           <p className="2xl:text-xs text-[10px]">
             {" "}
             +<span className="text-[#F8B602]">$</span>5.59
           </p>
         </div>
         <div className="  flex  gap-1  justify-between items-start  ">
-          <div className="">
+          <div className=" flex gap-1 justify-between item-center">
             {" "}
             <Image
               src={
@@ -45,20 +46,21 @@ const OrderMenuCard = () => {
               quality={100}
               className="w-10 h-10 xl:w-10"
             />
+            <div className=" flex flex-col gap-y-1">
+              <p className="font-semibold text-black 2xl:text-xs text-[10px] line-clamp-1 ">
+                Pepperoni Pizza
+              </p>
+              <p className="font-semibold text-[#A098AE] text-xs ">X1</p>
+            </div>
           </div>
-          <div className=" flex flex-col gap-y-1">
-            <p className="font-semibold text-black 2xl:text-xs text-[10px] line-clamp-1 ">
-              Pepperoni Pizza
-            </p>
-            <p className="font-semibold text-[#A098AE] text-xs ">X1</p>
-          </div>
+
           <p className="2xl:text-xs text-[10px]">
             {" "}
             +<span className="text-[#F8B602]">$</span>5.59
           </p>
         </div>
         <div className="  flex  gap-1  justify-between items-start  ">
-          <div className="">
+          <div className=" flex gap-1 justify-between item-center">
             {" "}
             <Image
               src={
@@ -70,13 +72,14 @@ const OrderMenuCard = () => {
               quality={100}
               className="w-10 h-10 xl:w-10"
             />
+            <div className=" flex flex-col gap-y-1">
+              <p className="font-semibold text-black 2xl:text-xs text-[10px] line-clamp-1 ">
+                Pepperoni Pizza
+              </p>
+              <p className="font-semibold text-[#A098AE] text-xs ">X1</p>
+            </div>
           </div>
-          <div className=" flex flex-col gap-y-1">
-            <p className="font-semibold text-black 2xl:text-xs text-[10px] line-clamp-1 ">
-              Pepperoni Pizza
-            </p>
-            <p className="font-semibold text-[#A098AE] text-xs ">X1</p>
-          </div>
+
           <p className="2xl:text-xs text-[10px]">
             {" "}
             +<span className="text-[#F8B602]">$</span>5.59

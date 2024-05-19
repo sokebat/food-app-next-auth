@@ -9,27 +9,27 @@ const CheckoutSection = () => {
           <div className="flex gap-1">
             <Image
               src={"/Images/checkout/chat.svg"}
-              alt="Dashboard Icon"
+              alt="chat Icon"
               height={30}
               width={30}
               quality={100}
-              className="w-6 xl:w-10"
+              className="w-6 xl:w-7"
             />
             <Image
               src={"/Images/checkout/Notification.svg"}
-              alt="Dashboard Icon"
+              alt="notification Icon"
               height={30}
               width={30}
               quality={100}
-              className="w-6 xl:w-10"
+              className="w-6 xl:w-7"
             />
             <Image
               src={"/Images/checkout/Process.svg"}
-              alt="Dashboard Icon"
+              alt="setting Icon"
               height={30}
               width={28}
               quality={100}
-              className="w-6 xl:w-10"
+              className="w-6 xl:w-7"
             />
           </div>
           <div>
@@ -38,7 +38,7 @@ const CheckoutSection = () => {
               src={
                 "https://media.istockphoto.com/id/1287868629/photo/beautiful-woman-stock-photo.jpg?s=1024x1024&w=is&k=20&c=Ywlhz3DpiRo0TJBNt84QHnnMhrU0HQQtB0ynG6LcWXg="
               }
-              alt="Dashboard Icon"
+              alt="user Icon"
               height={100}
               width={80}
               quality={100}
