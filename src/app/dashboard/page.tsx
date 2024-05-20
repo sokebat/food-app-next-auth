@@ -40,7 +40,7 @@ const Dashboard = () => {
             <SheetContent side="left" className="overflow-y-auto">
               <SheetHeader>
                 <SheetTitle>
-                  <h3 className="text-center text-[#2E2E2E] font-bold pt-10 pb-7 text-3xl">
+                  <h3 className="text-center text-[#2E2E2E] font-bold py-5 text-3xl">
                     GoMeal<span className="text-orange-400 text-3xl">.</span>
                   </h3>
                 </SheetTitle>
