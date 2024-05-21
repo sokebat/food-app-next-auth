@@ -35,8 +35,15 @@ const Login = () => {
       if (res?.status === 200) {
         toast.success("Successfully Loggedin");
         router.push("/dashboard");
-      } else if (res?.error) {
-        toast.error(res.error);
+      } else if(res?.status === 404){
+        console.log(res,'hello from 404')
+        toast.error(`${res.error} , ${res.status}`);
+
+      }
+      else if (res?.error) {
+        toast.error(`${res.error} , ${res.status}`);
+
+        // toast.error(`${res?.status}`);
       } else {
         toast.error("Logg in Failled");
       }

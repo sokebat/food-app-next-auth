@@ -26,14 +26,17 @@ const OtpForm = () => {
 
       try {
         const res = axios.post("/verify-otp", data);
-        toast.success("Account create Sucessfully");
-        
-        router.push("/sign-in");
+        console.log((await res).status);
+        if ((await res).status == 200) {
+          toast.success("Account create Sucessfully");
+
+          router.push("/sign-in");
+        }
+
         localStorage.removeItem("otp_token");
       } catch (error) {
         console.log(error);
         toast.error("Something went wrong");
-
       }
     }
   };
