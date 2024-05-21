@@ -41,7 +41,7 @@ const Login = () => {
 
       }
       else if (res?.error) {
-        toast.error(`${res.error} , ${res.status}`);
+        toast.error(res.error)
 
         // toast.error(`${res?.status}`);
       } else {
@@ -49,7 +49,7 @@ const Login = () => {
       }
     } catch (error) {
       console.log("this is error", error);
-      toast.error("Unsuccessful login");
+       
     }
   };
 

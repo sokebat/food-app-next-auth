@@ -27,18 +27,16 @@ const Signup = () => {
     e.preventDefault();
     try {
       const res = axios.post("/create-account", formData);
+      console.log(await res);
 
       if ((await res).status == 201) {
         const token = (await res).data.data.refreshToken;
         localStorage.setItem("otp_token", token);
         router.push("/verify-otp");
         toast.success("Verify your Mail");
-
       }
     } catch (error: any) {
-      
-      toast.error(error.code );
-      toast.error(error.message );
+      toast.error(error.response.data.message);
     }
   };
 

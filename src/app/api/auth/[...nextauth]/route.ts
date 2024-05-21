@@ -2,6 +2,7 @@ import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import axios from "axios";
 import { axiosPrivate } from "@/axios/axios";
+import toast from "react-hot-toast";
 
 const authOptions = {
   providers: [
@@ -12,30 +13,34 @@ const authOptions = {
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
-        console.log(credentials);
-        const res = await axios.post(
-          `${process.env.NEXT_AUTH_API_URL}/login`,
-          {
-            email: credentials?.email,
-            password: credentials?.password,
-          },
-          {
-            headers: {
-              Accept: "application/json",
+        try {
+          console.log(credentials);
+          const res = await axios.post(
+            `${process.env.NEXT_AUTH_API_URL}/login`,
+            {
+              email: credentials?.email,
+              password: credentials?.password,
             },
-          }
-        );
+            {
+              headers: {
+                Accept: "application/json",
+              },
+            }
+          );
 
-        // return { id: 1, name: "hello" };
+          // console.log("API Response:", res.data);
 
-        // console.log("this is response", res);
+         
+        
+          const user = res.data.data;
 
-        const user = res.data.data;
-        // console.log(user)
+          if (!user) return null;
 
-        if (!user) return null;
-
-        return user;
+          return user;
+        } catch (error) {
+          console.error("Authorization error:", error);
+          return null;
+        }
       },
     }),
   ],
