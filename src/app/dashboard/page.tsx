@@ -37,7 +37,7 @@ const Dashboard = () => {
             <SheetTrigger className="ml-4 flex items-center">
               <RxHamburgerMenu color="orange" size={35} />
             </SheetTrigger>
-            <SheetContent side="left" className="overflow-y-auto">
+            <SheetContent side="left" className="overflow-y-auto w-[280px]">
               <SheetHeader>
                 <SheetTitle>
                   <h3 className="text-center text-[#2E2E2E] font-bold py-5 text-3xl">
@@ -66,7 +66,7 @@ const Dashboard = () => {
                 />
               </div>
             </SheetTrigger>
-            <SheetContent side="right" className="overflow-y-auto">
+            <SheetContent side="right" className="overflow-y-auto w-[280px]">
               <SheetHeader>
                 <SheetTitle>
                   <h3 className="text-center text-[#2E2E2E] font-bold py-3  text-3xl">

@@ -42,7 +42,7 @@ const Signup = () => {
 
   return (
     <section className="bg-[#f5f5f5] text-gray-500">
-      <div className=" flex flex-col items-center justify-center px-6 py-8 mx-auto ">
+      <div className=" flex flex-col items-center justify-center px-6 py-8 mx-auto  h-screen">
         <h3 className="text-center text-[#2E2E2E] font-bold pt-10  pb-7  text-3xl">
           GoMeal<span className="text-orange-400 text-3xl ">.</span>
         </h3>

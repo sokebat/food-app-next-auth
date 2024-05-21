@@ -64,7 +64,7 @@ const MainSection = () => {
       id: 1,
       name: "Lime mint ",
       url: "https://cdn.pixabay.com/photo/2016/07/21/11/17/drink-1532300_640.jpg",
-      price: "  ",
+      price: " 5.55 ",
     },
     {
       id: 2,
