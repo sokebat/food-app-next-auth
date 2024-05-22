@@ -49,7 +49,7 @@ const MenuSection = () => {
         {datas.map((data) => {
           return (
             <div
-              className="gap-2  2xl:gap-4 py-1 px-3  2xl:px-7  flex   items-center justify-start rounded-xl "
+              className="gap-2  2xl:gap-4 py-2 px-3  2xl:px-7  flex   items-center justify-start rounded-xl "
               key={data.id}
             >
               <Image
@@ -58,7 +58,7 @@ const MenuSection = () => {
                 height={30}
                 width={30}
                 quality={100}
-                className="w-6 xl:w-10"
+                className="w-5 xl:w-8"
               />
               <p className="font-semibold text-[#A098AE] text-sm 2xl:text-lg ">
                 {data.name}

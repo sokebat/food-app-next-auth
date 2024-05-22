@@ -6,15 +6,18 @@ const CheckoutSection = () => {
     <section className="h-full bg-[#FFFFFF]  px-3 ">
       <div>
         <div className=" flex justify-between pt-10 pb-5">
-          <div className="flex gap-1">
-            <Image
-              src={"/Images/checkout/Chat.svg"}
-              alt="chat Icon"
-              height={30}
-              width={30}
-              quality={100}
-              className="w-6 xl:w-7"
-            />
+          <div className="flex gap-4">
+            <div className=" ">
+              <Image
+                src={"/Images/checkout/Chat.svg"}
+                alt="chat Icon"
+                height={30}
+                width={30}
+                quality={100}
+                className="w-6 xl:w-7"
+              />
+            
+            </div>
             <Image
               src={"/Images/checkout/Notification.svg"}
               alt="notification Icon"
@@ -29,7 +32,7 @@ const CheckoutSection = () => {
               height={30}
               width={28}
               quality={100}
-              className="w-6 xl:w-7"
+              className="w-5 xl:w-6"
             />
           </div>
           <div>
@@ -63,7 +66,7 @@ const CheckoutSection = () => {
             />
             <p className="text-wrap"> Gharipatan,Pokhara</p>
           </div>
-          <p className="p-1 border-[1px] rounded-md border-primary text-xs text-center text-[#F8B602] cursor-pointer">
+          <p className="p-1 border-[1px] rounded-md border-[#F8B602] text-xs text-center text-[#F8B602] cursor-pointer">
             {" "}
             change
           </p>
@@ -73,11 +76,11 @@ const CheckoutSection = () => {
             your default address of delivery{" "}
           </p>
           <div className="flex 2xl:flex-row flex-col gap-1 text-center ">
-            <p className="p-1 border-[1px] rounded-md border-primary text-xs text-[#F8B602] cursor-pointer">
+            <p className="p-1 border-[1px] rounded-md border-primary text-xs  cursor-pointer">
               {" "}
               Add details
             </p>
-            <p className="p-1 border-[1px] rounded-md border-primary text-xs text-[#F8B602] cursor-pointer">
+            <p className="p-1 border-[1px] rounded-md border-primary text-xs  cursor-pointer">
               {" "}
               Add note
             </p>

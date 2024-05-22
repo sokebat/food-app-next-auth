@@ -34,6 +34,7 @@ const ProductCard = ({ data }: DataProps) => {
             height={20}
             width={20}
             quality={100}
+            className="object-contain"
           />
         </p>
       </div>
@@ -46,7 +47,7 @@ const ProductCard = ({ data }: DataProps) => {
             {data.price}
           </p>
         </div>
-        <p className="bg-[#F8B602] p-1 px-2 sm:p-1 sm:px-3 text-white text-xs sm:text-lg md:text-xl  text-center rounded-lg ">
+        <p className="bg-[#F8B602] p-1 px-2 sm:p-1 sm:px-3 text-white text-xs sm:text-lg md:text-xl cursor-pointer  text-center rounded-lg ">
           +
         </p>
       </div>

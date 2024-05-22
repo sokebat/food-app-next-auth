@@ -76,7 +76,7 @@ const MainSection = () => {
     {
       id: 3,
       name: "red wine",
-      url: "https://cdn.pixabay.com/photo/2016/07/21/11/17/drink-1532300_640.jpg",
+      url: "https://cdn.pixabay.com/photo/2016/07/26/16/16/wine-1543170_1280.jpg",
       price: "2.43",
     },
     {
@@ -115,7 +115,7 @@ const MainSection = () => {
   return (
     <div className="md:mx-5   ">
       <div className="flex md:flex-row flex-col gap-y-4  items-center justify-between md:pt-10 ">
-        <div className=" flex  justify-between gap-4 items-center md:w-4/3">
+        <div className=" flex  justify-between gap-4 items-center  ">
           <p className="text-center text-[#2E2E2E] font-bold text-xl  xl:text-2xl  2xl:text-3xl">
             Hello, Samantha
           </p>
@@ -127,7 +127,7 @@ const MainSection = () => {
             </p>
           </div>
         </div>
-        <div className="   ">
+        <div className=" w-1/2  ">
           <div className="relative">
             <div className="absolute inset-y-0 start-0 flex items-center ps-3">
               <svg

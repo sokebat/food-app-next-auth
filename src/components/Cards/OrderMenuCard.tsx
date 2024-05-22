@@ -107,8 +107,8 @@ const OrderMenuCard = () => {
           </div>
         </div>
 
-        <div className="flex text-sm py-4  justify-around flex-col 2xl:flex-row px-3 items-center bg-[#f4f5f4] rounded-lg border-[1px] border-primary my-6 ">
-          <div className="rounded-full bg-[#F8B602] w-8 h-9 flex items-center justify-center">
+        <div className="flex text-sm py-4  justify-around flex-col 2xl:flex-row px-3 items-center bg-[#f4f5f4] rounded-lg border-[1px] border-[#F8B602] my-6 ">
+          <div className="rounded-full bg-[#F8B602] w-5 h-4 flex items-center justify-center">
             {" "}
             <Image
               src={"/Images/checkout/Coupon.svg"}
@@ -116,7 +116,7 @@ const OrderMenuCard = () => {
               height={100}
               width={100}
               quality={100}
-              className="w-6  h-8 "
+              className="w-4  h-3 "
             />
           </div>
           <div className="text-[11px] xl:text-[17px]">Have a coupon code? &gt;</div>
