@@ -23,7 +23,7 @@ const ProductCard = ({ data }: DataProps) => {
           height={200}
           width={200}
           quality={100}
-          className="w-48 h-52 rounded-md"
+          className="w-48 h-52 rounded-md object-fill "
         />
 
         <p className=" ml-2 ">

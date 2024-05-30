@@ -11,6 +11,7 @@ const authOptions = {
       credentials: {
         email: { label: "Email", type: "email" },
         password: { label: "Password", type: "password" },
+        csrfToken: { label: "csrfToken", type: "hidden" },
       },
       async authorize(credentials) {
         try {
@@ -24,6 +25,9 @@ const authOptions = {
             {
               headers: {
                 Accept: "application/json",
+                'Content-Type': 'application/json',
+                 
+                'X-CSRF-Token': credentials?.csrfToken,
               },
             }
           );
@@ -37,8 +41,9 @@ const authOptions = {
           if (!user) return null;
 
           return user;
-        } catch (error) {
-          console.error("Authorization error:", error);
+        } catch (error:any) {
+          console.error("Authorization error:", error.response?.data || error.message  || error);
+          return error.message.data
           return null;
         }
       },
