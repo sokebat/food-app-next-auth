@@ -25,26 +25,24 @@ const authOptions = {
             {
               headers: {
                 Accept: "application/json",
-                'Content-Type': 'application/json',
-                 
-                'X-CSRF-Token': credentials?.csrfToken,
+                "Content-Type": "application/json",
+
+                "X-CSRF-Token": credentials?.csrfToken,
               },
             }
           );
-
           // console.log("API Response:", res.data);
-
-         
-        
           const user = res.data.data;
 
           if (!user) return null;
 
           return user;
-        } catch (error:any) {
-          console.error("Authorization error:", error.response?.data || error.message  || error);
-          return error.message.data
-          return null;
+        } catch (error: any) {
+          console.error(
+            "Authorization error:",
+            error.response?.data || error.message || error
+          );
+          return error.message.data;
         }
       },
     }),

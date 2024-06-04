@@ -22,7 +22,7 @@ const Login = () => {
 
   const handelSignIn = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(formData);
+    // console.log(formData);
     try {
       const res = await signIn("credentials", {
         email: formData.email,

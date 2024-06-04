@@ -28,28 +28,24 @@ const OtpForm = () => {
       return;
     }
 
-    const parsedOtpValue = parseInt(otpValue, 10);
+    const parsedOtpValue = parseInt(otpValue);
 
-    if (!Number.isInteger(parsedOtpValue)) {
-      toast.error("Invalid OTP value. Please enter a valid integer.");
-      return;
-    }
-
+ 
     await handleOtpSubmission(parsedOtpValue, token);
   };
 
   const handleOtpSubmission = async (otpValue: number, token: string) => {
-    console.log(typeof(otpValue))
-    const data = {
-      token,
-      otp: otpValue,
-    };
+    const url = `/verify-otp?token=${encodeURIComponent(
+      token
+    )}&otp=${encodeURIComponent(otpValue)}`;
 
     try {
-      const res = await axios.post("/verify-otp", data);
+    
+      const res = await axios.post(url);
       if (res.status === 200) {
         toast.success("Account created successfully");
         localStorage.removeItem("otp_token");
+        router.push("/dashboard");
       }
     } catch (error: any) {
       console.error("Error verifying OTP:", error);
@@ -58,10 +54,7 @@ const OtpForm = () => {
         console.error("Response data:", error.response.data);
         console.error("Response status:", error.response.status);
         console.error("Response headers:", error.response.headers);
-        toast.error(
-          // error.response.data.message ||
-            "Failed to verify OTP. Please try again."
-        );
+        toast.error("Failed to verify OTP. Please try again.");
       } else if (error.request) {
         console.error("Request data:", error.request);
         toast.error("No response received. Please try again.");

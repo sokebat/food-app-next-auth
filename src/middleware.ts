@@ -17,28 +17,33 @@ export async function middleware(request: NextRequest) {
 
   const { pathname } = request.nextUrl;
 
-  // if (session && (pathname === "/sign-in" || pathname === "/sign-up")) {
-  //   const url = request.nextUrl.clone();
-  //   url.pathname = "/dashboard";
-  //   return NextResponse.redirect(url);
-  // }
+  if (session && (pathname === "/sign-in" || pathname === "/sign-up" || pathname ==='/verify-otp')) {
+    const url = request.nextUrl.clone();
+    url.pathname = "/dashboard";
+    return NextResponse.redirect(url);
+  }
   // if (!token && pathname.startsWith("/verify-otp")) {
   //   const url = request.nextUrl.clone();
   //   url.pathname = "/sign-up";
   //   return NextResponse.redirect(url);
   // }
 
- 
-  // if (pathname.startsWith("/dashboard") && !session) {
-  //   const url = request.nextUrl.clone();
-  //   url.pathname = "/sign-in";
+  if (pathname.startsWith("/dashboard") && !session) {
+    const url = request.nextUrl.clone();
+    url.pathname = "/sign-in";
 
-  //   return NextResponse.redirect(url);
-  // }
+    return NextResponse.redirect(url);
+  }
 
   return NextResponse.next();
 }
 
 export const config = {
-  matcher: ["/dashboard/:path*", "/sign-in", "/sign-up", "/verify-otp",'/:path*'],
+  matcher: [
+    "/dashboard/:path*",
+    "/sign-in",
+    "/sign-up",
+    "/verify-otp",
+    "/:path*",
+  ],
 };
